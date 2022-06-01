@@ -49,7 +49,7 @@ a=pd.concat([a, cd3])
 if 'type' not in st.session_state or 'a' not in st.session_state:
     st.session_state['type']='Categorical'
    # st.session_state['a']= pd.read_csv("2007_January.csv")   
-    st.session_state['a']=a
+  #  st.session_state['a']=a
     day_of_week={"DayOfWeek":[1,2,3,4,5,6,7], "Weekday":['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']}
     w=pd.DataFrame(day_of_week)
     Month_name={"Month":[1,2,3,4,5,6,7,8,9,10,11,12], "Month_":["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]}
@@ -128,7 +128,7 @@ cd_o_md=cd_o[['Name_o', 'City_o', 'IATA_o', 'Latitude_o', 'Longitude_o']]
 cd_d_md=cd_d[['Name_d','City_d', 'IATA_d', 'Latitude_d', 'Longitude_d']]
         
         
-a1=st.session_state['a'].merge(cd_o_md, how='left', left_on='Origin', right_on='IATA_o')
+a1=a.merge(cd_o_md, how='left', left_on='Origin', right_on='IATA_o')
 final_merge=a1.merge(cd_d_md, how='left', left_on='Dest', right_on='IATA_d')
         
         
