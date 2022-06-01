@@ -110,7 +110,7 @@ with EAD:
     #st.write(st.session_state)
     st.write(box)
     if st.session_state['type']=='Categorical':
-        dist=pd.DataFrame(st.session_state['a'][box].value_counts()).head(50)
+        dist=pd.DataFrame(a[box].value_counts()).head(50)
         st.bar_chart(dist)
     else:
         st.write(a[box].describe())
