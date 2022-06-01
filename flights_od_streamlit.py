@@ -116,8 +116,8 @@ with EAD:
         st.write(st.session_state['a'][box].describe())
         
 
-cd_o=pd.read_csv('/Users/kartiknarula/Downloads/airports.dat', header=None)
-cd_d=pd.read_csv('/Users/kartiknarula/Downloads/airports.dat', header=None)
+cd_o=pd.read_csv('airports.dat', header=None)
+cd_d=pd.read_csv('airports.dat', header=None)
 
 cd_o.columns=['Id', 'Name_o', 'City_o', 'Country', 'IATA_o', 'ICAO', 'Latitude_o', 'Longitude_o', 'Altitude', 'TimeZone', 'DST', 'Tz database time zone', 'Type', 'Source'] 
 cd_d.columns=['Id', 'Name_d', 'City_d', 'Country', 'IATA_d', 'ICAO', 'Latitude_d', 'Longitude_d', 'Altitude', 'TimeZone', 'DST', 'Tz database time zone', 'Type', 'Source']
