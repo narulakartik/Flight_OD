@@ -95,7 +95,7 @@ with header_container:
 
 with DV:
     st.title("Here's a sneak peak at the data!")
-    st.write(st.session_state['a'].head(50))
+    st.write(a.head(50))
     st.caption('There are 621,559 rows and 29 columns in the dataset')
 
 
@@ -113,7 +113,7 @@ with EAD:
         dist=pd.DataFrame(st.session_state['a'][box].value_counts()).head(50)
         st.bar_chart(dist)
     else:
-        st.write(st.session_state['a'][box].describe())
+        st.write(a[box].describe())
         
 
 cd_o=pd.read_csv('airports.dat', header=None)
