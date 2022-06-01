@@ -46,7 +46,7 @@ cd3=pd.read_csv('2007_January3.csv')
 a=pd.concat([cd1, cd2])
 a=pd.concat([a, cd3])
 
-if 'type' not in st.session_state or 'a' not in st.session_state:
+if 'type' not in st.session_state:
     st.session_state['type']='Categorical'
    # st.session_state['a']= pd.read_csv("2007_January.csv")   
   #  st.session_state['a']=a
@@ -54,9 +54,9 @@ if 'type' not in st.session_state or 'a' not in st.session_state:
     w=pd.DataFrame(day_of_week)
     Month_name={"Month":[1,2,3,4,5,6,7,8,9,10,11,12], "Month_":["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]}
     m=pd.DataFrame(Month_name)
-    st.session_state['a']=st.session_state['a'].merge(w, how='left', on='DayOfWeek')
-    st.session_state['a']=st.session_state['a'].merge(m, how='left', on='Month')
-    st.session_state['a'].drop(['Month', 'DayOfWeek'], axis=1)
+    #st.session_state['a']=st.session_state['a'].merge(w, how='left', on='DayOfWeek')
+    #st.session_state['a']=st.session_state['a'].merge(m, how='left', on='Month')
+    #st.session_state['a'].drop(['Month', 'DayOfWeek'], axis=1)
 
 with header_container:
 
