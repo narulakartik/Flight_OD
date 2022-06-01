@@ -66,7 +66,7 @@ with header_container:
 	# different levels of text you can include in your app
 	st.title("Are you ready to take off?")
 	#st.header("Flights Origin and Destination data")
-	st.subheader("We are analyzing US domestic flight data for the January 2007")
+	st.subheader("We are analyzing US domestic flight data for January 2007")
 	#st.write("check it for yourself, if you don't believe me")
 
 
