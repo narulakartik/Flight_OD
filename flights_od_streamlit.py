@@ -40,12 +40,16 @@ AnalysisQ2=st.container()
 AnalysisQ3=st.container()
 AnalysisQ4=st.container()
 
-
+cd1=pd.read_csv('2007_January1.csv')
+cd2=pd.read_csv('2007_January2.csv')
+cd3=pd.read_csv('2007_January3.csv')
+a=pd.concat([cd1, cd2])
+a=pd.concat([a, cd3])
 
 
 if 'type' not in st.session_state or 'a' not in st.session_state:
     st.session_state['type']='Categorical'
-    st.session_state['a']= pd.read_csv("2007_January.csv")   
+    st.session_state['a']= a  
     day_of_week={"DayOfWeek":[1,2,3,4,5,6,7], "Weekday":['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']}
     w=pd.DataFrame(day_of_week)
     Month_name={"Month":[1,2,3,4,5,6,7,8,9,10,11,12], "Month_":["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]}
