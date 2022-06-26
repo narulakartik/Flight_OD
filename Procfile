@@ -1,1 +1,1 @@
-web: gunicorn flight_od_streamlit:server
+web: gunicorn flights_od_streamlit:server
